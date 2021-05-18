@@ -5,6 +5,7 @@
     
 	<remote name="lineage" fetch="https://github.com/LineageOS/" />
 	<remote name="chintu" fetch="https://github.com/jrchintu/" />
+	<remote name="waveos" fetch="https://github.com/Wave-Project" />
     
     # Remove Repo
     
@@ -15,4 +16,5 @@
     
 	<project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="lineage" revision="lineage-18.1-legacy-um"/>
 	<project path="vendor/proton" name="android_vendor_proton" remote="chintu" revision="rvc"/>
+	<project path="external/zlib" name="external_zlib" remote="waveos" revision="r"/>
 </manifest>
