@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+    # Remote
+    
+	<remote name="lineage" fetch="https://github.com/LineageOS/" />
+	<remote name="chintu" fetch="https://github.com/jrchintu/" />
+    
+    # Remove Repo
+    
+	<remove-project name="lineage-18.1-legacy-um" />
+	<remove-project name="android_vendor_proton" />
+    
+    # Sync Removed Repo
+    
+	<project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="lineage" revision="lineage-18.1-legacy-um"/>
+	<project path="vendor/proton" name="android_vendor_proton" remote="chintu" revision="rvc"/>
+</manifest>
