@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  
-    # Remote
-    
-	<remote name="lineage" fetch="https://github.com/LineageOS/" />
-	<remote name="chintu" fetch="https://github.com/jrchintu/" />
-	<remote name="waveos" fetch="https://github.com/Wave-Project" />
-    
-    # Remove Repo
-    
-	<remove-project name="lineage-18.1-legacy-um" />
-	<remove-project name="android_vendor_proton" />
-    
-    # Sync Removed Repo
-    
-	<project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="lineage" revision="lineage-18.1-legacy-um"/>
-	<project path="vendor/proton" name="android_vendor_proton" remote="chintu" revision="rvc"/>
-	<project path="external/zlib" name="external_zlib" remote="waveos" revision="r"/>
+	<remote  name="chintuos" fetch="https://github.com/chintuos" />
+
+        # Frameworks base
+	<remove-project name="platform_frameworks_base" />
+	<project path="frameworks/base" name="platform_frameworks_base" remote="chintuos" revision="auto"/>
+
+        # Telephony
+	<remove-project name="platform_frameworks_opt_telephony" />
+	<project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="chintuos" revision="auto"/>
+	
+        # Telophony-2
+        <remove-project name="android_vendor_codeaurora_telephony" />
+	<project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="chintuos" revision="los18"/>
 </manifest>
