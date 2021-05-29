@@ -5,14 +5,11 @@
 		fetch="https://github.com/Ramdibaaz" />
 	<remote  name="chintu"
 		fetch="https://github.com/jrchintu" />	
+	<remote  name="apon"
+		fetch="https://github.com/Apon77" />
 
-	# Device Trees
- 	<project path="device/xiaomi/mido" name="aex" remote="b1" revision="debloat"/>
-	
-	# Kernel Trees
-	<project path="kernel/xiaomi/mido" name="aexk" remote="b1" revision="aex" />
-	
-	# Vendor Trees
-	<project path="vendor/xiaomi" name="aexv" remote="b1" revision="aex"/>
+ 	<project path="device/xiaomi/mido" name="aex" remote="apon" revision="aex"/>
+	<project path="kernel/xiaomi/mido" name="aexk" remote="apon" revision="aex" />
+	<project path="vendor/xiaomi" name="aexv" remote="apon" revision="aex"/>
 
 </manifest>
