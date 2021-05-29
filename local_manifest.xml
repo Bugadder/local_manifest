@@ -7,13 +7,12 @@
 		fetch="https://github.com/jrchintu" />	
 
 	# Device Trees
-	<remove-project name="aex" />
  	<project path="device/xiaomi/mido" name="aex" remote="b1" revision="debloat"/>
 	
-	<remove-project name="aexk" />
+	# Kernel Trees
 	<project path="kernel/xiaomi/mido" name="aexk" remote="b1" revision="aex" />
 	
-	<remove-project name="aexv" />
+	# Vendor Trees
 	<project path="vendor/xiaomi" name="aexv" remote="b1" revision="aex"/>
 
 </manifest>
